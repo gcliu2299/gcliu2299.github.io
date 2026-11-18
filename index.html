@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guanchen Liu — Machine Learning, Computer Vision and Robotics portfolio.">
+  <title>Guanchen Liu | ML & Robotics</title>
+  <style>
+    :root { color-scheme: dark; --bg:#080c18; --surface:#11182b; --line:#28334d; --text:#f2f6ff; --muted:#a3b2cc; --accent:#7ba7ff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif; background:radial-gradient(ellipse at 82% 3%,#1c2253 0,transparent 38%),var(--bg); color:var(--text); line-height:1.65; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { max-width:1100px; padding:0 24px; margin:auto; }
+    .nav { position:sticky; top:0; z-index:10; background:#080c18df; border-bottom:1px solid #ffffff16; backdrop-filter:blur(14px); }
+    .nav-inner { min-height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.02em; font-size:1.12rem; }
+    .brand span { color:var(--accent); }
+    .links { display:flex; gap:24px; flex-wrap:wrap; font-size:.92rem; color:var(--muted); }
+    .links a:hover, .footer a:hover { color:var(--accent); }
+    .hero { padding:104px 0 94px; max-width:800px; }
+    .eyebrow { color:#91b5ff; font-size:.87rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { margin:14px 0; font-size:clamp(3.3rem,8vw,6.4rem); line-height:1.06; letter-spacing:-.06em; }
+    .gradient { background:linear-gradient(95deg,#9fd0ff,#a48bff 65%,#74e6e0); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero h2 { margin:22px 0 12px; font-size:clamp(1.25rem,3vw,1.75rem); font-weight:600; }
+    .lead { max-width:650px; font-size:1.08rem; color:var(--muted); }
+    .actions { display:flex; gap:13px; flex-wrap:wrap; margin-top:30px; }
+    .btn { display:inline-block; border-radius:11px; padding:12px 19px; font-weight:700; font-size:.94rem; border:1px solid #52648a; transition:transform .2s,border-color .2s; }
+    .btn:hover { transform:translateY(-2px); border-color:#a5c4ff; }
+    .btn.primary { background:linear-gradient(120deg,#6e9eff,#9a86eb); color:#071021; border-color:transparent; }
+    section { padding:36px 0 54px; scroll-margin-top:85px; }
+    .section-top { display:flex; align-items:center; gap:14px; margin-bottom:23px; }
+    .section-top h2 { font-size:1.9rem; letter-spacing:-.035em; margin:0; }
+    .section-top::after { content:""; height:1px; flex:1; background:var(--line); }
+    .muted { color:var(--muted); }
+    .about { max-width:830px; }
+    .pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:23px; }
+    .pill { border:1px solid #385077; color:#c5d6f7; background:#19253e; border-radius:999px; padding:6px 13px; font-size:.85rem; }
+    .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:19px; }
+    .card { background:linear-gradient(145deg,#17213a,#101728); border:1px solid var(--line); border-radius:18px; overflow:hidden; transition:transform .2s,border-color .2s; }
+    .card:hover { transform:translateY(-4px); border-color:#6d8cc3; }
+    .visual { min-height:176px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 30% 30%,#3852a4,#182540 65%,#10182c); border-bottom:1px solid var(--line); color:#d6e1ff; font-size:3.2rem; }
+    .card-body { padding:23px; }
+    .card h3 { margin:0 0 8px; font-size:1.22rem; }
+    .card p { margin:0 0 17px; color:var(--muted); font-size:.94rem; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:17px; }
+    .tags span { font-size:.75rem; padding:4px 9px; border-radius:6px; background:#273858; color:#bdd1ff; }
+    .card a { color:#9fc1ff; font-weight:700; font-size:.91rem; }
+    .contact { border:1px solid var(--line); border-radius:18px; padding:28px; background:#111a30; }
+    .footer { border-top:1px solid var(--line); margin-top:55px; padding:22px 0 35px; color:var(--muted); font-size:.88rem; }
+    @media(max-width:720px) { .nav-inner { align-items:flex-start; flex-direction:column; padding:15px 0; gap:8px; } .links { gap:15px; } .hero { padding:65px 0; } .project-grid { grid-template-columns:1fr; } section { padding:28px 0 40px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .btn,.card { transition:none; } }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <nav class="wrap nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#home">GUANCHEN<span>.</span></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap">
+    <div class="hero" id="home">
+      <div class="eyebrow">UC Berkeley · MEng 2027</div>
+      <h1>Guanchen <span class="gradient">Liu.</span></h1>
+      <h2>Machine Learning · Computer Vision · Robotics</h2>
+      <p class="lead">I build machine learning systems for real-world engineering problems — from visual inspection robots to graph-based transportation models and optimization tools.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore Projects</a>
+        <a class="btn" href="https://github.com/gcliu2299" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/gcliu2299/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-top"><h2>About Me</h2></div>
+      <p class="about muted">I'm a Master of Engineering student in Systems Engineering at the University of California, Berkeley. My work combines deep learning, computer vision, optimization, and engineering applications. I enjoy turning research ideas into working prototypes and measurable results.</p>
+    </section>
+
+    <section id="projects">
+      <div class="section-top"><h2>Selected Projects</h2></div>
+      <div class="project-grid">
+        <article class="card">
+          <div class="visual" style="padding:0;min-height:0;background:#16243c"><img src="assets/cloudjet-cover.webp" alt="CloudJet inspection robot prototype" loading="lazy" style="width:100%;height:230px;object-fit:cover;object-position:center 65%;display:block"></div>
+          <div class="card-body">
+            <h3>CloudJet — Climbing Inspection Robot</h3>
+            <p>Led a nine-person team developing a steel-structure climbing inspection prototype, integrating sensing, corrosion segmentation, and remote control. Prototype climbing was demonstrated in testing.</p>
+            <div class="tags"><span>Robotics</span><span>PyTorch</span><span>U-Net</span><span>ESP32</span></div>
+            <a href="cloudjet.html">View project & demo ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="visual" aria-hidden="true">◉</div>
+          <div class="card-body">
+            <h3>Corrosion Segmentation with U-Net</h3>
+            <p>Trained a ResNet34-U-Net for pixel-level corrosion detection and area measurement, with GPU-based inference and evaluation.</p>
+            <div class="tags"><span>Computer Vision</span><span>ResNet34</span><span>Segmentation</span></div>
+            <a href="https://github.com/gcliu2299" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="visual" aria-hidden="true">⌁</div>
+          <div class="card-body">
+            <h3>Traffic Assignment GNN Surrogate</h3>
+            <p>Built a graph neural network surrogate for traffic flow prediction on the public Sioux Falls network, exploring faster alternatives to iterative assignment.</p>
+            <div class="tags"><span>GNN</span><span>PyTorch</span><span>Transportation</span></div>
+            <a href="mailto:gcliu2299@berkeley.edu?subject=GNN%20Project">Ask about this project ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="visual" aria-hidden="true">◇</div>
+          <div class="card-body">
+            <h3>Maritime Resource Optimization</h3>
+            <p>Built a simulation-driven resource optimization tool using OR-Tools CP-SAT and a Flask dashboard. Team awarded third place at a maritime hackathon.</p>
+            <div class="tags"><span>Optimization</span><span>CP-SAT</span><span>Flask</span></div>
+            <a href="https://github.com/gcliu2299" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-top"><h2>Technical Skills</h2></div>
+      <div class="pills">
+        <span class="pill">Python</span><span class="pill">C++</span><span class="pill">PyTorch</span>
+        <span class="pill">TensorFlow</span><span class="pill">OpenCV</span><span class="pill">CNN / U-Net</span>
+        <span class="pill">Transformers</span><span class="pill">GNN</span><span class="pill">FastAPI / Flask</span>
+        <span class="pill">OR-Tools</span><span class="pill">CUDA</span><span class="pill">Git</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-top"><h2>Let's Connect</h2></div>
+      <div class="contact">
+        <p class="muted">Interested in machine learning, computer vision, robotics, or applied AI? Feel free to reach out.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:gcliu2299@berkeley.edu">Email Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/gcliu2299/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <!-- Later: upload resume.pdf to this repository, then add a Resume button here. -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">© <span id="year"></span> Guanchen Liu · Built with HTML & CSS</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
