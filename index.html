@@ -41,6 +41,11 @@
     .card:hover { transform:translateY(-4px); border-color:#6d8cc3; }
     .visual { min-height:176px; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 30% 30%,#3852a4,#182540 65%,#10182c); border-bottom:1px solid var(--line); color:#d6e1ff; font-size:3.2rem; }
     .card-body { padding:23px; }
+    /* Keep the 3:2 cover; let its lower part extend behind a fading text panel. */
+    .cloudjet-card { position:relative; background:#101728; }
+    .cloudjet-card .visual { position:relative; aspect-ratio:3/2; overflow:visible; border-bottom:0; background:transparent; }
+    .cloudjet-card .visual img { position:absolute; top:0; left:0; width:100%; height:auto; display:block; max-width:none; -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 73%,transparent 100%); mask-image:linear-gradient(to bottom,#000 0%,#000 73%,transparent 100%); }
+    .cloudjet-card .card-body { position:relative; z-index:1; background:linear-gradient(to bottom,rgba(16,23,40,.70) 0%,rgba(16,23,40,.94) 95px,#101728 160px); border-top:1px solid #ffffff14; }
     .card h3 { margin:0 0 8px; font-size:1.22rem; }
     .card p { margin:0 0 17px; color:var(--muted); font-size:.94rem; }
     .tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:17px; }
@@ -85,8 +90,8 @@
     <section id="projects">
       <div class="section-top"><h2>Selected Projects</h2></div>
       <div class="project-grid">
-        <article class="card">
-          <div class="visual" style="padding:0;min-height:0;background:#16243c"><img src="assets/cloudjet-cover.webp" alt="CloudJet inspection robot prototype" loading="lazy" style="width:100%;aspect-ratio:3/2;height:auto;object-fit:cover;object-position:center;display:block"></div>
+        <article class="card cloudjet-card">
+          <div class="visual"><img src="assets/7x5.jpg" alt="CloudJet inspection robot prototype" loading="lazy"></div>
           <div class="card-body">
             <h3>CloudJet Robotics — Climbing Inspection Robot</h3>
             <p>Led a nine-person team developing a steel-structure climbing inspection prototype, integrating sensing, corrosion segmentation, and remote control. Prototype climbing performance was tested.</p>
