@@ -18,6 +18,29 @@
 .dot{width:11px;height:11px;background:rgba(255,255,255,.55);transition:none}
 .dot.active{background:#fff;outline:2px solid rgba(255,255,255,.4);outline-offset:2px}
 @media(max-width:600px){.carousel-dots{bottom:8px;right:8px;padding:6px 9px;gap:9px}}
+
+/* Light Tech preview — visual overrides only */
+:root { color-scheme:light; --bg:#f7f9ff; --panel:#ffffff; --line:#d8e2f3; --text:#17233d; --muted:#536681; --accent:#315fca; }
+body { background:radial-gradient(ellipse at 90% 0%,#dfebff 0%,transparent 37%),linear-gradient(150deg,#fbfcff,#f2f7ff); }
+.nav { background:rgba(250,252,255,.90); border-bottom:1px solid #dce5f3; }
+.brand span {color:#4169cc}
+.back {color:#3a5f9e}.back:hover {color:#173c83}
+.eyebrow {color:#3f62b0}
+.gradient { background:linear-gradient(95deg,#1b4fb3,#7e55db 65%,#2496b5); -webkit-background-clip:text;background-clip:text;color:transparent; }
+.tag {background:#eaf1ff;border-color:#ccd9f4;color:#31538c}
+.caption {color:#6b7e9e}
+.panel {background:linear-gradient(145deg,#fff,#f0f5ff)}
+.media {background:#fff}
+.media video {background:#eaf0f9}
+.stat {background:#fff}
+.stat strong {color:#21427b}
+.note {background:#edf3ff;border-left-color:#6d8fe0;color:#435a81}
+.foot a {color:#315fbd}
+.system-gallery {background:#fff}
+.carousel-dots {background:rgba(21,37,69,.64)}
+.dot {background:rgba(255,255,255,.60)}
+.dot.active {background:#fff;outline-color:rgba(255,255,255,.48)}
+.dot:focus-visible {outline-color:#2454a5}
 </style>
 </head>
 <body>
