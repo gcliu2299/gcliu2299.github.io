@@ -38,6 +38,16 @@
     .about { max-width:830px; }
     .pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:23px; }
     .pill { border:1px solid #385077; color:#c5d6f7; background:#19253e; border-radius:999px; padding:6px 13px; font-size:.85rem; }
+    .skill-groups { display:grid; gap:19px; }
+    .skill-group { display:grid; grid-template-columns:205px minmax(0,1fr); gap:14px; align-items:start; }
+    .skill-group h3 { margin:5px 0 0; font-size:.97rem; color:var(--text); font-weight:700; }
+    .skill-group .pills { margin-top:0; }
+    .achievement { padding:22px 25px; border:1px solid var(--line); border-radius:16px; background:var(--surface); }
+    .achievement h3 { margin:0 0 10px; font-size:1.08rem; font-weight:700; line-height:1.55; }
+    .achievement a { color:#315fc0; text-decoration:none; }
+    .achievement a:hover { text-decoration:underline; }
+    .achievement p { margin:0; font-size:.91rem; color:var(--muted); }
+    @media(max-width:720px) { .skill-group { grid-template-columns:1fr; gap:8px; } }
     .project-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:19px; }
     .card { background:linear-gradient(145deg,#17213a,#101728); border:1px solid var(--line); border-radius:18px; overflow:hidden; transition:transform .2s,border-color .2s; }
     .card:hover { transform:translateY(-4px); border-color:#6d8cc3; }
@@ -148,12 +158,36 @@
 
     <section id="skills">
       <div class="section-top"><h2>Technical Skills</h2></div>
-      <div class="pills">
-        <span class="pill">Python</span><span class="pill">C++</span><span class="pill">PyTorch</span>
-        <span class="pill">TensorFlow</span><span class="pill">OpenCV</span><span class="pill">CNN / U-Net</span>
-        <span class="pill">Transformers</span><span class="pill">GNN</span><span class="pill">FastAPI / Flask</span>
-        <span class="pill">OR-Tools</span><span class="pill">CUDA</span><span class="pill">Git</span>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Programming</h3>
+          <div class="pills"><span class="pill">Python</span><span class="pill">MATLAB</span><span class="pill">C++</span><span class="pill">SQL</span><span class="pill">JavaScript</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Machine Learning &amp; Computer Vision</h3>
+          <div class="pills"><span class="pill">PyTorch</span><span class="pill">OpenCV</span><span class="pill">CNN</span><span class="pill">U-Net</span><span class="pill">ResNet</span><span class="pill">COLMAP</span><span class="pill">TensorFlow</span><span class="pill">scikit-learn</span><span class="pill">Transformer</span><span class="pill">LLM</span><span class="pill">GNN</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Engineering &amp; Tools</h3>
+          <div class="pills"><span class="pill">FastAPI</span><span class="pill">Flask</span><span class="pill">pytest</span><span class="pill">Git</span><span class="pill">GitHub Actions</span><span class="pill">CUDA</span><span class="pill">Cloud GPU Computing</span><span class="pill">OR-Tools</span><span class="pill">Signal Processing</span></div>
+        </div>
       </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-top"><h2>Publications</h2></div>
+      <article class="achievement">
+        <h3><a href="https://doi.org/10.1016/j.conbuildmat.2026.145615" target="_blank" rel="noopener noreferrer">Corrosion Quantification and Prediction of Steel Structures Using Electromechanical Impedance based Sensors and Deep Neural Networks ↗</a></h3>
+        <p>Construction and Building Materials · SCI Journal Paper</p>
+      </article>
+    </section>
+
+    <section id="patents">
+      <div class="section-top"><h2>Patents</h2></div>
+      <article class="achievement">
+        <h3><a href="https://eureka.patsnap.com/patent/CN122259717A" target="_blank" rel="noopener noreferrer">Magnetic Attraction Mobile Platform and Piezoelectric Portable Detection Device for Steel Structure Damage Detection ↗</a></h3>
+        <p>Chinese Invention Patent Application · CN122259717A</p>
+      </article>
     </section>
 
     <section id="contact">
