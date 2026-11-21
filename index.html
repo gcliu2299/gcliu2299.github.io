@@ -53,6 +53,9 @@
     .card:hover { transform:translateY(-4px); border-color:#6d8cc3; }
     .visual { min-height:0; aspect-ratio:7/5; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 30% 30%,#3852a4,#182540 65%,#10182c); border-bottom:1px solid var(--line); color:#d6e1ff; font-size:3.2rem; }
     .card-body { padding:23px; }
+    .nlcad-card .visual { overflow:hidden; background:#eef3fb; }
+    .nlcad-card .visual img { display:block; width:100%; height:100%; object-fit:contain; }
+
     /* Keep the 3:2 cover; let its lower part extend behind a fading text panel. */
     .cloudjet-card { position:relative; background:#101728; }
     .cloudjet-card .visual { position:relative; aspect-ratio:7/5; overflow:visible; border-bottom:0; background:transparent; }
@@ -108,7 +111,7 @@
       <div class="eyebrow">UC Berkeley · MEng 2027</div>
       <h1>Guanchen <span class="gradient">Liu.</span></h1>
       <h2>Machine Learning &amp; Computer Vision Engineer</h2>
-      <p class="lead">I build machine learning systems for real-world engineering problems — from visual inspection robots to graph-based transportation models and optimization tools.</p>
+      <p class="lead">I build machine learning systems for real-world engineering problems — from robotic visual inspection to Transformer-powered CAD applications.</p>
       <div class="actions">
         <a class="btn primary" href="#projects">Explore Projects</a>
         <a class="btn" href="https://github.com/gcliu2299" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -135,22 +138,13 @@
             <a href="cloudjet.html">View project & demo ↗</a>
           </div>
         </article>
-        <article class="card">
-          <div class="visual" aria-hidden="true">⌁</div>
+        <article class="card nlcad-card">
+          <div class="visual"><img src="assets/nlcad-card-cover.png" alt="NLCAD natural language CAD controller with interactive 2D canvas and structured JSON predictions" loading="lazy"></div>
           <div class="card-body">
-            <h3>Traffic Assignment GNN Surrogate</h3>
-            <p>Built a graph neural network surrogate for traffic flow prediction on the public Sioux Falls network, exploring faster alternatives to iterative assignment.</p>
-            <div class="tags"><span>GNN</span><span>PyTorch</span><span>Transportation</span></div>
-            <a href="mailto:gcliu2299@berkeley.edu?subject=GNN%20Project">Ask about this project ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="visual" aria-hidden="true">◇</div>
-          <div class="card-body">
-            <h3>Maritime Resource Optimization</h3>
-            <p>Built a simulation-driven resource optimization tool using OR-Tools CP-SAT and a Flask dashboard. Team awarded third place at a maritime hackathon.</p>
-            <div class="tags"><span>Optimization</span><span>CP-SAT</span><span>Flask</span></div>
-            <a href="https://github.com/gcliu2299" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+            <h3>NLCAD — Natural Language CAD Controller</h3>
+            <p>Built and trained a causal Transformer from scratch to convert English instructions into executable CAD commands, integrating model inference with an interactive 2D drawing application.</p>
+            <div class="tags"><span>Python</span><span>PyTorch</span><span>Transformer</span><span>FastAPI</span><span>JavaScript</span><span>CAD</span></div>
+            <a href="nlcad.html">View project &amp; demo ↗</a>
           </div>
         </article>
       </div>
